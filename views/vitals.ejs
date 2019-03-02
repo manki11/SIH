@@ -1,0 +1,38 @@
+<% include ./header.ejs %>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-0"></div>
+        <div class="col-lg-6 col-md-6 col-sm-10">
+
+            <div class="card">
+                <div class="container">
+                    <form action="/appointments/vitals" method="post">
+                        <h3>Appointment</h3>
+                        <h6 class="card-subtitle mb-2 text-muted">Add your vitals.</h6><br>
+
+                        <input class="input-block-level" type="text" name="weight" placeholder="Weight"><br><br>
+                        <input class="input-block-level" type="text" name="height" placeholder="Height"><br><br>
+                        <input class="input-block-level" type="text" name="pulse" placeholder="Pulse"><br><br>
+                        <input class="input-block-level" type="text" name="bp" placeholder="BP"><br><br>
+
+                        <button class="btn btn-primary btn-lg btn-block" type="Submit">Submit Vitals</button>
+                        <br><br>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <br>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-0"></div>
+    </div>
+
+</div>
+</body>
+</html>

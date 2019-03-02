@@ -9,7 +9,11 @@ var userSchema = new mongoose.Schema({
     address: String,
     bloodGrp: String,
     UID: String,
-    previousRecord: String
+    previousRecord: String,
+    vitals:[{
+        type: mongoose.Schema.ObjectId,
+        ref: 'Vitals'
+    }]
 });
 
 userSchema.plugin(passportLocalMongoose);

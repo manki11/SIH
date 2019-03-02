@@ -1,6 +1,8 @@
 "use strict";
 var express = require("express"),
     Appointment = require("../models/appointment"),
+    User = require("../models/user"),
+    Vitals = require("../models/vitals"),
     middleware = require("../middlewares");
 var router = express.Router();
 
@@ -50,7 +52,45 @@ router.post("/", middleware.isLoggedIn, function (req, res) {
         }
     });
 
-    res.redirect("appointments/questions");
+    res.redirect("appointments/vitals");
+});
+
+router.get("/vitals", middleware.isLoggedIn, function (req,res) {
+    res.render("vitals")
+});
+
+router.post("/vitals", middleware.isLoggedIn, function (req,res) {
+    User.findById(req.user.id, function (err, user) {
+        if(err){
+            req.flash("error","Something went wrong. Please try again later");
+            console.log(err);
+            res.redirect("/home");
+        }else{
+            Vitals.create({
+                bp: req.body.bp,
+                height: req.body.height,
+                weight: req.body.weight,
+                pulse: req.body.pulse,
+                patient: user
+            }, function (err, vital) {
+                if(err){
+                    console.log(err);
+                }else{
+                    vital.save();
+                    user.vitals.push(vital);
+                    user.save(function (err, user) {
+                        if(err){
+                            console.log(err);
+                        }else{
+                            console.log(vital);
+                            res.redirect("/appointments/questions");
+                        }
+                    });
+                }
+            });
+
+        }
+    });
 });
 
 router.get("/new",middleware.isLoggedIn, function (req, res) {
