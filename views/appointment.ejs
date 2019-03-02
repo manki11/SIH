@@ -1,0 +1,16 @@
+<% include ./header.ejs %>
+
+<div class="row text-center">
+
+    <% appointment.forEach(function (app) { %>
+    <div class="col-md-4 col-sm-6">
+        <div class="thumbnail">
+            <div class="caption">
+                <p><%= app.date %></p>
+            </div>
+        </div>
+    </div>
+    <% }) %>
+
+</div>
+
