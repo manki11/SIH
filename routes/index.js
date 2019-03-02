@@ -7,11 +7,11 @@ var express= require("express"),
 var router= express.Router();
 
 router.get("/",function(req,res){
-    res.render("home");
+    res.render("login");
 });
 
-router.get("/secret",middleware.isLoggedIn,function(req,res){
-    res.render("secret");
+router.get("/home",middleware.isLoggedIn,function(req,res){
+    res.render("index");
 });
 
 router.get("/register",function(req,res){
@@ -25,7 +25,7 @@ router.post("/register",function(req,res){
             return res.render("register");
         }
         passport.authenticate("local")(req,res,function(){
-            res.redirect("/secret");
+            res.redirect("/home");
         });
     });
 });
@@ -35,7 +35,7 @@ router.get("/login", function(req,res){
 });
 
 router.post("/login", passport.authenticate("local",{
-    successRedirect: "/secret",
+    successRedirect: "/home",
     failureRedirect: "/login"
 }),function(req,res){
 

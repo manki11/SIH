@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignIn </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/formstyle.css">
+
+</head>
+<body background="/background.jpg">
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-0"></div>
+        <div class="col-lg-6 col-md-6 col-sm-10">
+
+            <div class="card">
+                <div class="container">
+                    <form action="/appointments" method="post">
+                        <h3>Appointment</h3>
+                        <h6 class="card-subtitle mb-2 text-muted">Book a new appointment.</h6><br>
+
+                        <input class="input-block-level" type="text" name="department" placeholder="Department"><br><br>
+                        <input class="input-block-level" type="text" name="drName" placeholder="Doctor Name"><br><br>
+                        <input class="input-block-level" type="date" name="date" placeholder="Date"><br><br>
+                        <input class="input-block-level" type="time" name="time" placeholder="Time"><br><br>
+
+                        <label>Old Patient&nbsp;&nbsp;</label><input type="radio" name="type" value="old"><br>
+                        <label>New Patient&nbsp;</label><input type="radio" name="type" value="new">
+
+                        <button class="btn btn-primary btn-lg btn-block" type="Submit">Make Appointment</button>
+                        <br><br>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <br>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-0"></div>
+    </div>
+
+</div>
+</body>
+</html>

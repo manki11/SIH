@@ -1,12 +1,13 @@
 var express = require("express"),
     passport = require("passport"),
-    bodyParser = require("body-parser"),
     LocalStrategy = require("passport-local"),
+    bodyParser = require('body-parser'),
     passportLocalMongoose = require("passport-local-mongoose"),
     User = require("./models/user"),
     mongoose= require("mongoose");
 
-var indexRoutes= require("./routes/index");
+var indexRoutes= require("./routes/index"),
+    appointmentRoutes= require('./routes/appointments')
 
 mongoose.connect("mongodb://localhost/auth_demo_app");
 
@@ -24,8 +25,13 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+app.use(express.static(__dirname+"/public"));
+
+
 
 app.use(indexRoutes);
+app.use("/appointments",appointmentRoutes);
+
 
 app.listen(9000,function(){
     console.log("Authentication demo started");
