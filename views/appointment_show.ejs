@@ -1,0 +1,45 @@
+<% include ./header_doctor.ejs %>
+
+<div class="col-md-12 col-sm-push-2" xmlns="http://www.w3.org/1999/html">
+    <div class="row" style="margin-top: 200px;background-color: rgba(255,255,255,.4);padding: 30px">
+        <div class="col-3">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                   aria-controls="v-pills-home" aria-selected="true">Patient History</a>
+                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+                   aria-controls="v-pills-messages" aria-selected="false">Questions</a>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                     aria-labelledby="v-pills-home-tab">
+
+                    <b style="color: black">Weight:</b><p>65 kg</p><br>
+                    <b style="color: black">Height:</b><p>173 cm</p><br>
+                    <b style="color: black">Blood Pressure:</b><p>100</p><br>
+                    <b style="color: black">Pulse:</b><p>72 bpm</p><br>
+
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" style="color: black!important;">
+
+                    <b style="color: black">Reason for appointment
+                    </b><br>
+                    <p>Leg sprain</p><br>
+                    <b style="color: black">How serious is your disease or condition and how does it effect you on a daily basis.
+                    </b><br>
+                    <p>Difficult to walk</p><br>
+                    <b style="color: black">How long have you been facing these symptoms(If any).
+                    </b><br>
+                    <p>Past 1 week</p><br>
+                    <b style="color: black">Any pre-existing conditions that you have?(If any).
+                    </b><br>
+                    <p>No</p><br>
+
+                </div>
+            </div>
+        </div>
+        <a class="btn-primary" style="padding: 10px;border-radius: 2px;margin-left: 40%" href="/doctor/prescription">Give Prescription</a>
+    </div>
+</div>

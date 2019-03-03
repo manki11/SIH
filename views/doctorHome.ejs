@@ -1,4 +1,28 @@
+<% include ./header_doctor.ejs %>
+
 <h1>Doctor Home</h1>
 
-<%= appointment %>
+<div class="row text-center" style="margin-top: 150px">
+
+    <% appointment.forEach(function (app,i) { %>
+    <div class="row" style="margin-left: 75px">
+        <div class="col-sm-6">
+            <div class="card" style="width: 18rem;margin: 30px">
+                <div class="card-body">
+                    <a href="/doctor/appointment/<%= app.id%>">#<%= app.id%></a>
+                    <h5 class="card-title">Department: <%= app.department %></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Doctor: <%= app.doctor.doctorName %></h6>
+                    <p class="card-text">Appointment Completed: <%= app.isCompleted %></p>
+                    <p class="card-text">Patient: Rishab Lamba</p>
+                    <p class="card-text">Date: <%= app.date %></p>
+                    <p class="card-text">Time: <%= app.time %></p>
+                    <a href="#" class="card-link">Add Prescription</a><br/>
+                    <a href="#" class="card-link">Next Appointment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% }) %>
+
+</div>
 

@@ -72,7 +72,7 @@
     </head>
     <body>
         <div class="container">
-            <form action="/" method="POST">
+            <form action="/doctor/prescription" method="POST">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form_main">
@@ -121,7 +121,8 @@
                                 <input
                                     type="text"
                                     class="form-control"
-                                    id="physical"
+									id="physical"
+									name="physical"
                                 />
                             </div>
                             <div class="form-group">
@@ -131,7 +132,8 @@
                                 <input
                                     type="text"
                                     class="form-control"
-                                    id="provi"
+									id="provi"
+									name="provisional"
                                 />
                             </div>
                             <div class="form-group">
@@ -141,7 +143,8 @@
                                 <textarea
                                     id="investigation"
                                     class="form-control"
-                                    rows="5"
+									rows="5"
+									name="investigation"
                                 ></textarea>
                             </div>
                             <b>Medicines Advised:</b>
@@ -162,7 +165,8 @@
                                                     class="form-control"
                                                     aria-label="Text input with segmented dropdown button"
                                                     style="width: 50%"
-                                                    id="i1"
+													id="i1"
+													name="medicine"
                                                 />
                                                 <div class="input-group-append">
                                                     <button
@@ -215,7 +219,8 @@
                                                     class="form-control"
                                                     aria-label="Text input with segmented dropdown button"
                                                     style="width: 50%"
-                                                    id="i2"
+													id="i2"
+													name="dose"
                                                 />
                                                 <div class="input-group-append">
                                                     <button
@@ -260,7 +265,8 @@
                                                     class="form-control"
                                                     aria-label="Text input with segmented dropdown button"
                                                     style="width: 50%"
-                                                    id="i3"
+													id="i3"
+													name="instruction"
                                                 />
                                                 <div class="input-group-append">
                                                     <button
@@ -327,7 +333,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
+				</div>
+				<input class="btn btn-outline-secondary block" type="submit" value="submit">
             </form>
         </div>
 

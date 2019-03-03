@@ -34,9 +34,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 app.use(express.static(__dirname + '/public'));
-app.use(indexRoutes);
-app.use("/appointments",appointmentRoutes);
-app.use("/doctor",doctorRoutes);
+
 
 app.post('/image', (req, res) => {
     // strip off the data: url prefix to get just the base64-encoded bytes
@@ -86,11 +84,9 @@ async function quickstart2(datetime, res) {
     res.render('reciept', { rikki_text: fullTextAnnotation.text });
 }
 
-app.get('/prescription', (req, res) => {
-    res.render('prescription');
-});
 app.use(indexRoutes);
 app.use('/appointments', appointmentRoutes);
+app.use("/doctor",doctorRoutes);
 
 app.listen(5000, function() {
     console.log('Authentication demo started');
