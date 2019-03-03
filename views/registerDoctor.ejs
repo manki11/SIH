@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignIn For Doctors</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/formstyle.css">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-0"></div>
+        <div class="col-lg-6 col-md-6 col-sm-10">
+            <div class="card">
+                <form action="/doctor/register" method="POST">
+                    <div class="container">
+                        <h3>Register </h3>
+                        <h6 class="card-subtitle mb-2 text-muted">Create an account for MaxHealthcare</h6><br>
+
+                        <input class="input-block-level" type="text" name="name" placeholder="Name"><br>
+                        <input class="input-block-level" type="text" name="username" placeholder="Email"><br>
+                        <input class="input-block-level" type="password" name="password" placeholder="password"><br>
+                        <input class="input-block-level" type="text" name="department" placeholder="Department"><br>
+                        <input class="input-block-level" type="number" name="phoneNo" placeholder="PhoneNo" min="10"><br>
+
+
+                        <button class="btn btn-primary btn-lg btn-block" type="Submit">Sign Up As Doctor</button>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <!-- adddddd -->
+                                <!-- <h6><center><small>OR</small></center></h6>
+                                <h6 class="text-muted"><center><small>Sign in with</small></center></h6> -->
+
+
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-0"></div>
+    </div>
+</div>
+</body>
+</html>

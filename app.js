@@ -8,8 +8,9 @@ var express = require('express'),
     User = require('./models/user'),
     mongoose = require('mongoose');
 
-var indexRoutes = require('./routes/index'),
-    appointmentRoutes = require('./routes/appointments');
+var indexRoutes= require("./routes/index"),
+    appointmentRoutes= require('./routes/appointments'),
+    doctorRoutes= require('./routes/doctors')
 
 mongoose.connect('mongodb://localhost/auth_demo_app', {
     useNewUrlParser: true
@@ -33,6 +34,9 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 app.use(express.static(__dirname + '/public'));
+app.use(indexRoutes);
+app.use("/appointments",appointmentRoutes);
+app.use("/doctor",doctorRoutes);
 
 app.post('/image', (req, res) => {
     // strip off the data: url prefix to get just the base64-encoded bytes
@@ -71,6 +75,7 @@ async function quickstart2(datetime, res) {
     const myImage = `./public/assets/images/image${datetime}.png`;
     // Imports the Google Cloud client library
     const vision = require('@google-cloud/vision');
+
 
     // Creates a client
     const client = new vision.ImageAnnotatorClient();
