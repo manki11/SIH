@@ -40,15 +40,19 @@
                                 /><br />
                                 <input
                                     class="input-block-level in"
+                                    id="1"
                                     type="Email"
                                     name="username"
                                     placeholder="Email"
+                                    onclick="speech(1)"
                                 /><br />
                                 <input
                                     class="input-block-level in"
+                                    id="2"
                                     type="password"
                                     name="password"
                                     placeholder="password"
+                                    onclick="speech(2)"
                                 /><br /> 
                                 <%li = str.indexOf('W/D');%>
                                 <%hi =  str.indexOf('DOB');%>
@@ -79,9 +83,11 @@
                                 /><br />
                                 <input
                                     class="input-block-level in"
+                                    id="3"
                                     type="number"
                                     name="phone"
                                     placeholder="Phone"
+                                    onclick="speech(3)"
                                     min="10"
                                 /><br />
                                 <%li = str.indexOf('BG');%>
@@ -171,7 +177,7 @@
             </div>
         </div>
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="/fullStack.js"></script>
+        <script src="assets/js/fullStack.js"></script>
         <script src="/main.js"></script>
     </body>
 </html>

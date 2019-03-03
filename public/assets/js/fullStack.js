@@ -35,7 +35,7 @@ var x = document.querySelectorAll('.in');
 var i, item;
 for (i = 0; i < x.length; i++) {
     item = x[i];
-    // item.value=i;
+    item.value=i;
 }
 function speech(id) {
     console.log(id);
@@ -56,7 +56,7 @@ function speech(id) {
             console.log('e.results[0] ' + e.results[0]);
             // p.textContent = transcript;//appending text to the DOM
             if (e.results[0] != undefined) {
-                if (e.results[0].isFinal) {
+                // if (e.results[0].isFinal) {
                     console.log('inside Final');
                     // console.log("item"+x[i]);
                     document.getElementById(id).value = transcript;
@@ -66,7 +66,7 @@ function speech(id) {
                     return;
                     // p = document.CreateElement("p");
                     // words.appendChild(p);
-                }
+                //}
             } //words each over each other as user talks because speech recognition resets so this is an edgecase
 
             //   if(transcript.includes("is" || "I" || "that")){
