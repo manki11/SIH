@@ -1,43 +1,104 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Prescription Record </title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/formstyle.css">
-	
-</head>
-<body background="/background.jpg" >
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Prescription</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
 
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-0"></div>
-			<div class="col-lg-6 col-md-6 col-sm-10">
-				
-                 <div class="card">
-	                 <div class="container">
-                     <h3>Prescription Record</h3>
-                     <h6 class="card-subtitle mb-2 text-muted">Add new prescription</h6><br>
-         
-                      <input class="input-block-level" type="text" name="medicine"  placeholder="Medicine"><br><br>
-                      <input class="input-block-level" type="number" name="medicine"  placeholder="Dosage"><br><br>
-                    
+        <style></style>
+    </head>
+    <body onload="init();">
+        <nav
+            class="navbar navbar-light bg-light"
+            style="background-color: #e3f2fd;"
+        >
+            <a class="navbar-brand" href="#">
+                <img
+                    src="assets/images/logo/max-logo.png"
+                    width="150"
+                    class="d-inline-block align-top"
+                    alt=""
+                />
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#"
+                        >Bucket Selection</a
+                    >
+                    <a class="nav-item nav-link" href="#">OCR</a>
+                    <a class="nav-item nav-link" href="#">Speech To Text</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container form-group">
+            <label for="prescription"> Prescription : </label>
+            <div class="row" style="padding-left: 50px" onload="init();">
+                <button
+                    class="btn btn-info"
+                    onclick="startWebcam();"
+                    style="margin-right:10px; margin-bottom: 10px"
+                >
+                    Start WebCam
+                </button>
 
-                      
-                      
-                      <!-- <input class="input-block-level" type="password" name="password" placeholder="Password"><br><br> -->
-                     
- 
-                      <button class="btn btn-primary btn-lg btn-block" type="Submit">Save Prescription</button><br><br>
-                         
-                     </div>
+                <button
+                    class="btn btn-success"
+                    onclick="snapshot();"
+                    style="margin-right:10px; margin-bottom: 10px"
+                >
+                    Take Snapshot
+                </button>
 
-                 </div>
+                <video
+                    onclick="snapshot(this);"
+                    width="1000"
+                    height="400"
+                    id="video"
+                    controls
+                    autoplay
+                ></video>
+                <hr />
 
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-0"></div>
+                <canvas id="myCanvas" width="1000" height="400"></canvas>
 
-		</div>
-		
-    </div>
-</body>
+                <form action="/reciept" method="POST">
+                    <input type="hidden" name="img" id="screenshot" />
+                    <input class="btn btn-outline-info" type="submit" />
+                </form>
+            </div>
+        </div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+        <script src="/main.js"></script>
+    </body>
 </html>

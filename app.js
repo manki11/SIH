@@ -86,8 +86,8 @@ async function quickstart2(datetime, res) {
     res.render('reciept', { rikki_text: fullTextAnnotation.text });
 }
 
-app.get('/reciept', (req, res) => {
-    res.render('reciept');
+app.get('/prescription', (req, res) => {
+    res.render('prescription');
 });
 app.use(indexRoutes);
 app.use('/appointments', appointmentRoutes);
