@@ -3,7 +3,6 @@ passportLocalMongoose = require("passport-local-mongoose");
 
 var doctorSchema = new mongoose.Schema({
     name: String,
-    password: String,
     department: String,
     phoneNo: String,
     email: String,

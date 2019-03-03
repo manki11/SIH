@@ -2,6 +2,7 @@
 var express = require("express"),
     Appointment = require("../models/appointment"),
     User = require("../models/user"),
+    Doctor= require("../models/doctor"),
     Vitals = require("../models/vitals"),
     middleware = require("../middlewares");
 var router = express.Router();
@@ -32,27 +33,37 @@ router.post("/", middleware.isLoggedIn, function (req, res) {
         username:req.user.username
     };
 
-    var newAppointment={
-        department:department,
-        date:date,
-        time:time,
-        patient:patient,
-        type: type,
-        isCompleted: false
-    };
+    //
+    Doctor.findOne({}, function (err, doctor) {
 
-    console.log(newAppointment);
-
-
-    Appointment.create(newAppointment, function (err, appointment) {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log("Appointment Created");
+        var doc={
+            id:doctor._id,
+            doctorName: doctor.name
         }
-    });
 
-    res.redirect("appointments/vitals");
+        var newAppointment={
+            department:department,
+            date:date,
+            time:time,
+            patient:patient,
+            doctor: doc,
+            type: type,
+            isCompleted: false
+        };
+
+        console.log(newAppointment);
+
+
+        Appointment.create(newAppointment, function (err, appointment) {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log("Appointment Created");
+            }
+        });
+
+        res.redirect("appointments/vitals");
+    })
 });
 
 router.get("/vitals", middleware.isLoggedIn, function (req,res) {
@@ -88,7 +99,6 @@ router.post("/vitals", middleware.isLoggedIn, function (req,res) {
                     });
                 }
             });
-
         }
     });
 });

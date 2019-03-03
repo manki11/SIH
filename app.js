@@ -7,7 +7,8 @@ var express = require("express"),
     mongoose= require("mongoose");
 
 var indexRoutes= require("./routes/index"),
-    appointmentRoutes= require('./routes/appointments')
+    appointmentRoutes= require('./routes/appointments'),
+    doctorRoutes= require('./routes/doctors')
 
 mongoose.connect("mongodb://localhost/auth_demo_app");
 
@@ -31,6 +32,7 @@ app.use(express.static(__dirname+"/public"));
 
 app.use(indexRoutes);
 app.use("/appointments",appointmentRoutes);
+app.use("/doctor",doctorRoutes);
 
 
 app.listen(9000,function(){
