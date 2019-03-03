@@ -4,7 +4,6 @@ var prescriptionSchema = new mongoose.Schema({
     medicine: String,
     dose: String,
     instruction: String,
-    route: String,
     physical: String,
     provisional: String,
     investigation:String,

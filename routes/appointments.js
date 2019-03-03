@@ -34,9 +34,7 @@ router.post("/", middleware.isLoggedIn, function (req, res) {
     };
     
     console.log(patient);
-    
 
-    //
     Doctor.findOne({}, function (err, doctor) {
 
         var doc={

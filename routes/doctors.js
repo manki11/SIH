@@ -2,6 +2,7 @@
 var express = require("express"),
     Doctor = require("../models/doctor"),
     Appointment = require('../models/appointment'),
+    Prescription= require('../models/prescription'),
     middleware = require("../middlewares");
 
 var router = express.Router();
@@ -22,6 +23,33 @@ router.get("/home", function (req, res) {
 router.get("/prescription", function (req, res) {
     res.render("prescription")
 });
+
+router.post("/prescription", function (req,res) {
+    var medicine= req.body.medicine;
+    var dose= req.body.dose;
+    var instructions= req.body.instructions;
+    var physical= req.body.physical;
+    var provisional= req.body.provisional;
+    var investigation= req.body.investigation;
+
+    var prescription= {
+        medicine: medicine,
+        dose: dose,
+        instructions: instructions,
+        physical: physical,
+        provisional: provisional,
+        investigation: investigation
+    };
+
+    Prescription.create(prescription, function (err, pres) {
+        if(err)console.log(err);
+        else{
+            res.render("/doctor/home")
+        }
+    })
+
+
+})
 
 router.get("/register", function (req, res) {
     res.render("registerDoctor");
