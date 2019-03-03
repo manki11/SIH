@@ -23,7 +23,7 @@ router.get("/prescription", function (req, res) {
     Prescription.find(function (err, prescriptions) {
         if (err) console.log(err);
         else {
-            res.render("prescription_show", {prescription: prescription})
+            res.render("prescription_show", {prescription: prescriptions})
         }
 
     })

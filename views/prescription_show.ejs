@@ -1,11 +1,11 @@
 <% include ./header.ejs %>
 
-<div class="row text-center" style="margin-top: 150px">
+<div class="text-center" style="margin-top: 150px">
 
     <% prescription.forEach(function (pres) { %>
-    <div class="row" style="margin-left: 75px">
-        <div class="col-sm-12">
-            <div class="card" style="width: 18rem;margin: 30px;text-align: left!important;">
+    <div class="" style="margin-left: 75px">
+        <div class="">
+            <div class="card" style="width:40%;margin: 30px;text-align: left!important;">
                 <div class="card-body">
                     <h5 class="card-title">Prescription</h5>
                     <p class="card-text">Patient Name: Rishab Lamba</p>
@@ -13,13 +13,16 @@
                     <p class="card-text">Age: 20</p>
                     <p class="card-text">Doctor Name: Dr Mankirat Singh</p>
                     <p class="card-text">Max ID: #567876</p>
-                    <br><br><br>
+                    <br>
                     <p class="card-text">Physical Examination: <%= pres.physical%></p>
                     <p class="card-text">Provisional Examination: <%= pres.provisional%></p>
                     <p class="card-text">Investigation Examination: <%= pres.investigation%></p>
-                    <br><br><br>
-
-                    <a href="#" class="card-link">Prescription</a>
+                    <br>
+                    ------------------------------------------------------<br/>
+                    <b>Medicines:</b>
+                    <p class="card-text">Medicine: <%= pres.medicine%></p>
+                    <p class="card-text">Schedule: <%= pres.dose%></p>
+                    <p class="card-text">Instruction: <%= pres.instruction%></p>
                 </div>
             </div>
         </div>

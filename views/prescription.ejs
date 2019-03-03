@@ -74,35 +74,11 @@
         <div class="container">
             <form action="/doctor/prescription" method="POST">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-8" style="margin-left: 200px">
                         <div class="form_main">
                             <h4 class="heading">
                                 <strong>Max</strong> Health Care <span></span>
                             </h4>
-                            Patient name :
-                            <input type="text" name="name" /> &nbsp;&nbsp; Age :
-                            <input type="number" name="age" /> &nbsp;&nbsp;
-                            Gender :
-                            <input type="radio" name="gender" /> M&nbsp; &nbsp;
-                            <input type="radio" name="gender" />&nbsp;F <br />
-                            <br />
-                            MaxID: <input type="number" /> &nbsp;&nbsp; Doctor
-                            Name : <input type="text" name="doc_name" /> &nbsp;
-                            &nbsp; Date:
-                            <input type="date" name="date" /> &nbsp;&nbsp;
-                            Invoice Number :
-                            <input type="number" name="invoice" />
-
-                            <hr style="color: orangered" size="300" />
-
-                            <div class="form-group">
-                                <label for="allergy">Allergy:</label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="allergy"
-                                />
-                            </div>
                             <div class="form-group">
                                 <label for="illness">
                                     Chief complaints and history of present
@@ -140,12 +116,11 @@
                                 <label for="investigation">
                                     Investigation advised:
                                 </label>
-                                <textarea
+                                <input
                                     id="investigation"
                                     class="form-control"
-									rows="5"
 									name="investigation"
-                                ></textarea>
+                                >
                             </div>
                             <b>Medicines Advised:</b>
                             <table class="table table-bordered">
@@ -322,19 +297,10 @@
                                     id="advice"
                                 />
                             </div>
-
-                            <div>
-                                <label for="follow">Next follow up:</label>
-                                <input
-                                    type="date"
-                                    id="follow"
-                                    name="trip-start"
-                                />
-                            </div>
                         </div>
                     </div>
 				</div>
-				<input class="btn btn-outline-secondary block" type="submit" value="submit">
+                <input class="btn btn-outline-secondary block" style="margin-left: 200px" type="submit" value="submit">
             </form>
         </div>
 
