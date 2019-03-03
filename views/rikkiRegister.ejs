@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="/formstyle.css" />
     </head>
     <body onload="init()">
+            <% let res = rikki_text.replace(/:/gi," ")%>
+            <% let str= res.trim(); %>
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -27,12 +29,14 @@
                                     Create an account for MaxHealthcare
                                 </h6>
                                 <br />
-
+                                <%li = str.indexOf('Name');%>
+                                <%hi =  str.indexOf('पिता');%>
                                 <input
                                     class="input-block-level"
                                     type="text"
                                     name="name"
                                     placeholder="Name"
+                                    value="<%=str.slice(li+4,hi).trim()%>"
                                 /><br />
                                 <input
                                     class="input-block-level"
@@ -51,6 +55,7 @@
                                     type="text"
                                     name="fname"
                                     placeholder="Father's Name"
+                                    value="<%=str.slice(li+13,hi).trim()%>"
                                 /><br />
                                 
                                 <input
@@ -58,6 +63,7 @@
                                     type="date"
                                     name="dob"
                                     placeholder="DOB DD/MM/YYYY"
+                                    value="<%=str.slice(li+13,hi).trim()%>"
                                 /><br />
                                 <input
                                     class="input-block-level"
@@ -141,13 +147,15 @@
                         controls
                         autoplay
                     ></video>
-                    <hr>
+                    <p>
+                        Screenshots :
+                    </p>
                     <p>
                         <canvas id="myCanvas" width="400" height="350"></canvas>
                     </p>
                     <form action="/image" method="POST">
-                        <input type="hidden" name="img" id="screenshot" />
-                        <input class="btn btn-outline-info" type="submit" />
+                        <input name="img" id="screenshot" />
+                        <input type="submit" />
                     </form>
                 </div>
             </div>

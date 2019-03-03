@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="/formstyle.css" />
     </head>
     <body onload="init()">
+            <% let res = rikki_text.replace(/:/gi," ")%>
+            <% let str= res.trim(); %>
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -27,12 +29,14 @@
                                     Create an account for MaxHealthcare
                                 </h6>
                                 <br />
-
+                                <%li = str.indexOf('Name');%>
+                                <%hi =  str.indexOf('S/W');%>
                                 <input
                                     class="input-block-level"
                                     type="text"
                                     name="name"
                                     placeholder="Name"
+                                    value="<%=str.slice(li+4,hi).trim()%>"
                                 /><br />
                                 <input
                                     class="input-block-level"
@@ -46,24 +50,32 @@
                                     name="password"
                                     placeholder="password"
                                 /><br /> 
+                                <%li = str.indexOf('W/D');%>
+                                <%hi =  str.indexOf('DOB');%>
                                 <input
                                     class="input-block-level"
                                     type="text"
                                     name="fname"
                                     placeholder="Father's Name"
+                                    value="<%=str.slice(li+4,hi).trim()%>"
                                 /><br />
-                                
+                                <%li = str.indexOf('DOB');%>
+                                <%hi =  str.indexOf('BG');%>
                                 <input
                                     class="input-block-level"
-                                    type="date"
+                                    type="text"
                                     name="dob"
                                     placeholder="DOB DD/MM/YYYY"
+                                    value="<%=str.slice(li+4,hi).trim()%>"
                                 /><br />
+                                <%li = str.indexOf('Address');%>
+                                <%hi =  str.indexOf('110');%>
                                 <input
                                     class="input-block-level"
                                     type="text"
                                     name="address"
                                     placeholder="Address"
+                                    value="<%=str.slice(li+7,hi+7).trim()%>"
                                 /><br />
                                 <input
                                     class="input-block-level"
@@ -72,17 +84,23 @@
                                     placeholder="Phone"
                                     min="10"
                                 /><br />
+                                <%li = str.indexOf('BG');%>
+                                <%hi =  str.indexOf('Address');%>
                                 <input
                                     class="input-block-level"
                                     type="text"
                                     name="bloodg"
                                     placeholder="Blood Group"
+                                    value="<%=str.slice(li+2,hi).trim()%>"
                                 /><br />
+                                <%li = str.indexOf('DL-');%>
+                                <%hi =  str.indexOf('(P)');%>
                                 <input
                                     class="input-block-level"
-                                    type="number"
+                                    type="text"
                                     name="uid"
                                     placeholder="UID no."
+                                    value="<%=str.slice(li,hi).trim()%>"
                                 /><br />
 
                                 <textarea
@@ -136,7 +154,7 @@
                     <video
                         onclick="snapshot(this);"
                         width="419"
-                        height="400"
+                        height="380"
                         id="video"
                         controls
                         autoplay
@@ -147,7 +165,7 @@
                     </p>
                     <form action="/image" method="POST">
                         <input type="hidden" name="img" id="screenshot" />
-                        <input class="btn btn-outline-info" type="submit" />
+                        <input class="btn-outline-success" type="submit" />
                     </form>
                 </div>
             </div>

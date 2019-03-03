@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "maxhealthcare",
+  "private_key_id": "f2ec51524577a7e2ed8c048193ee46890a127f5f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDBpuxceDG8mpuF\n/fg9zKWqg03q1NQAr89+VIFB/BoEeq+tiq13kRXUthMjkJv8iaDc2NDFHLizJFjY\nXFlW5e0+SD6383sZrtZMBhRthgO3vLsylW9gZFakwzlqQ9bOMMJObdJ9iQym/2+7\naEsjQgxnbb25+4FsJOP91KyEs9j2MDa49ARdfRnlUtGeq0WJ8RwWf+Sg5z2Q59hr\nhoAn7/fGJ++Y7NTwnqweRLZmH0QVXQ647Gkav7vSzYgbj0Vz4t8IvjW9xrV+LuBw\nB7/oUFfeeSRtsBSaKwmw1R5LrCEqJUNjY+t0oeDA3pX+0YEEcCVebejuwNtGyMML\n29yVtGi3AgMBAAECggEAD/xZkqCRaoJQyFTYwzE7k8HXEsWS4qOgu0r6iJnpA+mk\nyuyhuTcO2EpXdh4f4k7yKojzYvImBRPBCctFzLiaRwPruX+t78bRBeGSmh/v+qDn\nyxsu4IQn6t36xVzoRIkd4R+LurUviDGZ5ZyMZ1Kyd29FtC6g1m6NK4z82M+H33qi\nplE+I47cYgNDRJ22N/o2v5oLJ0J9/t5Zz2GTw08DyMCV1QM5P+DAgnxLi/6M6Io9\nmM4txqm3RF4cDZgvKjPVMi2ReKw+7af+ZcnXpoR4IY8MOFAiGr8f9/ltHNxxIKsY\nSXVxQT451VLDwrhLDmS1sflqPba/rAT+Nac2LaP2YQKBgQDhsbGMLPoNGA5y6YJW\nBME91W6laFRL5rLRcddOxXYR5gGSAyJuudJd3xCMiwPKqYtHsTclIHUSj4jCsQff\nomtPiZthrm76f8HCN7e2bfJjjvV1tCRKrLqm3Y+Brq5Rw05X59NuRf6AR4vGqTLf\nJzj/Xj5EIgosYoStzNm4FCp6HwKBgQDbp8X/M8bozCXuF6IhIEffTc5lTI9Jzfbp\nXacYKyt8FF+YR9oxEbMEv382DPpOyCIetiOusPhT/RNZckcyOKvst1DW+3tVc0Mw\nr1ucDsGUQAhIcx4U715GqlJWMBUXjyU8d8qoltxkwQguwWlcXb88Zd8AKwW8e8Ce\nKLNpFFFuaQKBgQCtNEhUkkPH/rk/+PJcf0Op530Flb5zjXWYBOy+eA23iLOV0bAA\nF71Y6xJxOVJMmrbX6ymt5W3TM7I579BiEOyX2rwTR+HFfnw9R7NGXrRRMWowzXG4\nmTyZSJmUZXFEMEWUcsYw76hz2/RqHnl7BkfYuwPAF/uEuoqmMvq3KUq78wKBgAl0\ndlRe4TACIZvXDpaIci+NhNXdbsmJgRhYfKnQqeWEZv0CEsVL8r3AlHQ6KMgdW0Kh\nKnYJjhbnbN7LyX7C67ubxHIMjymFdZ3x3mqgQ/riqribo+7YwuEd0b9+AFpsQfkR\nWvrYy5HWsUh58NQWAPZTmD7Em1Garhbgv6BFTKAJAoGBALixIqnEpzoCJBdBr0l1\nxEYS2bardqW955ZBOEHjMoP3FwE+SOopqw/LPZBXoNZ6j3NbKYU68zRCGIeMNMvO\n49uZdko2e2apLSsLWqlbkMz/57oOUjNnqUm2FNDaobKAWmA4Fj0qzTmXlE0WPMiW\n+97czRP5A/27wh/63W3h34+7\n-----END PRIVATE KEY-----\n",
+  "client_email": "rikki-407@maxhealthcare.iam.gserviceaccount.com",
+  "client_id": "104424769291548250859",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/rikki-407%40maxhealthcare.iam.gserviceaccount.com"
+}
