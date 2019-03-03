@@ -32,6 +32,9 @@ router.post("/", middleware.isLoggedIn, function (req, res) {
         id:req.user._id,
         username:req.user.username
     };
+    
+    console.log(patient);
+    
 
     //
     Doctor.findOne({}, function (err, doctor) {
@@ -108,7 +111,7 @@ router.get("/new",middleware.isLoggedIn, function (req, res) {
 });
 
 router.get("/questions", middleware.isLoggedIn, function (req,res) {
-    res.render("questions", {drName:"Dr Rajeev"})
+    res.render("questions", {drName:"Dr Mankirat"})
 });
 
 

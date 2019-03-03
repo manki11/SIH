@@ -3,14 +3,11 @@ var mongoose = require("mongoose")
 var prescriptionSchema = new mongoose.Schema({
     medicine: String,
     dose: String,
-    patient: {
-        id:{
-            type: mongoose.Schema.Types.ObjectId,
-            ref:"User"
-        },
-        userName: String
-    },
-    isDelivered: Boolean
+    instruction: String,
+    route: String,
+    physical: String,
+    provisional: String,
+    investigation:String,
 });
 
 module.exports = mongoose.model("Prescription",prescriptionSchema);
