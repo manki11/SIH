@@ -72,542 +72,263 @@
     </head>
     <body>
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form_main">
-                        <h4 class="heading">
-                            <strong>Max</strong> Health Care <span></span>
-                        </h4>
-                        Patient name :
-                        <input type="text" name="name" /> &nbsp;&nbsp; Age :
-                        <input type="number" name="age" /> &nbsp;&nbsp; Gender :
-                        <input type="radio" name="gender" /> M&nbsp; &nbsp;
-                        <input type="radio" name="gender" />&nbsp;F <br />
-                        <br />
-                        MaxID: <input type="number" /> &nbsp;&nbsp; Doctor Name
-                        : <input type="text" name="doc_name" /> &nbsp; &nbsp;
-                        Date: <input type="date" name="date" /> &nbsp;&nbsp;
-                        Invoice Number : <input type="number" name="invoice" />
+            <form action="/" method="POST">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form_main">
+                            <h4 class="heading">
+                                <strong>Max</strong> Health Care <span></span>
+                            </h4>
+                            Patient name :
+                            <input type="text" name="name" /> &nbsp;&nbsp; Age :
+                            <input type="number" name="age" /> &nbsp;&nbsp;
+                            Gender :
+                            <input type="radio" name="gender" /> M&nbsp; &nbsp;
+                            <input type="radio" name="gender" />&nbsp;F <br />
+                            <br />
+                            MaxID: <input type="number" /> &nbsp;&nbsp; Doctor
+                            Name : <input type="text" name="doc_name" /> &nbsp;
+                            &nbsp; Date:
+                            <input type="date" name="date" /> &nbsp;&nbsp;
+                            Invoice Number :
+                            <input type="number" name="invoice" />
 
-                        <hr style="color: orangered" size="300" />
+                            <hr style="color: orangered" size="300" />
 
-                        <div class="form-group">
-                            <label for="allergy">Allergy:</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="allergy"
-                            />
-                        </div>
-                        <div class="form-group">
-                            <label for="illness">
-                                Chief complaints and history of present illness:
-                            </label>
-                            <textarea
-                                id="illness"
-                                class="form-control"
-                                rows="5"
-                            ></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="physical">Physical Examination:</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="physical"
-                            />
-                        </div>
-                        <div class="form-group">
-                            <label for="provi">Provisional Diagnosis:</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="provi"
-                            />
-                        </div>
-                        <div class="form-group">
-                            <label for="investigation">
-                                Investigation advised:
-                            </label>
-                            <textarea
-                                id="investigation"
-                                class="form-control"
-                                rows="5"
-                            ></textarea>
-                        </div>
-                        <b>Medicines Advised:</b>
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Medicine</th>
-                                    <th>Schedule</th>
-                                    <th>Instruction</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="input-group">
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                aria-label="Text input with segmented dropdown button"
-                                                style="width: 50%"
-                                                id="i1"
-                                            />
-                                            <div class="input-group-append">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                                                    data-toggle="dropdown"
-                                                    aria-haspopup="true"
-                                                    aria-expanded="false"
-                                                >
-                                                    <span class="sr-only"
-                                                        >Toggle Dropdown</span
+                            <div class="form-group">
+                                <label for="allergy">Allergy:</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="allergy"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="illness">
+                                    Chief complaints and history of present
+                                    illness:
+                                </label>
+                                <textarea
+                                    id="illness"
+                                    class="form-control"
+                                    rows="5"
+                                ></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="physical"
+                                    >Physical Examination:</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="physical"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="provi"
+                                    >Provisional Diagnosis:</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="provi"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="investigation">
+                                    Investigation advised:
+                                </label>
+                                <textarea
+                                    id="investigation"
+                                    class="form-control"
+                                    rows="5"
+                                ></textarea>
+                            </div>
+                            <b>Medicines Advised:</b>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Medicine</th>
+                                        <th>Schedule</th>
+                                        <th>Instruction</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="input-group">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    aria-label="Text input with segmented dropdown button"
+                                                    style="width: 50%"
+                                                    id="i1"
+                                                />
+                                                <div class="input-group-append">
+                                                    <button
+                                                        type="button"
+                                                        class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                                                        data-toggle="dropdown"
+                                                        aria-haspopup="true"
+                                                        aria-expanded="false"
                                                     >
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a
-                                                        class="dropdown-item d1"
-                                                        onclick="enterInput(this)"
-                                                        value="Seroflo 250 ROTACAP"
-                                                        >Seroflo 250 ROTACAP</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d1"
-                                                        onclick="enterInput(this)"
-                                                        value="TIATE TRANSCAPS"
-                                                        >TIATE TRANSCAPS</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d1"
-                                                        onclick="enterInput(this)"
-                                                        value="DOXIFOLO 650 mg TABLET"
-                                                        >DOXIFOLO 650 mg
-                                                        TABLET</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d1"
-                                                        onclick="enterInput(this)"
-                                                        value="AKT 4KIT"
-                                                        >AKT 4KIT</a
-                                                    >
+                                                        <span class="sr-only"
+                                                            >Toggle
+                                                            Dropdown</span
+                                                        >
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a
+                                                            class="dropdown-item d1"
+                                                            onclick="enterInput(this)"
+                                                            value="Seroflo 250 ROTACAP"
+                                                            >Seroflo 250
+                                                            ROTACAP</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item d1"
+                                                            onclick="enterInput(this)"
+                                                            value="TIATE TRANSCAPS"
+                                                            >TIATE TRANSCAPS</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item d1"
+                                                            onclick="enterInput(this)"
+                                                            value="DOXIFOLO 650 mg TABLET"
+                                                            >DOXIFOLO 650 mg
+                                                            TABLET</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item d1"
+                                                            onclick="enterInput(this)"
+                                                            value="AKT 4KIT"
+                                                            >AKT 4KIT</a
+                                                        >
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group">
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                aria-label="Text input with segmented dropdown button"
-                                                style="width: 50%"
-                                                id="i2"
-                                            />
-                                            <div class="input-group-append">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                                                    data-toggle="dropdown"
-                                                    aria-haspopup="true"
-                                                    aria-expanded="false"
-                                                >
-                                                    <span class="sr-only"
-                                                        >Toggle Dropdown</span
+                                        </td>
+                                        <td>
+                                            <div class="input-group">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    aria-label="Text input with segmented dropdown button"
+                                                    style="width: 50%"
+                                                    id="i2"
+                                                />
+                                                <div class="input-group-append">
+                                                    <button
+                                                        type="button"
+                                                        class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                                                        data-toggle="dropdown"
+                                                        aria-haspopup="true"
+                                                        aria-expanded="false"
                                                     >
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a
-                                                        class="dropdown-item d2"
-                                                        onclick="enterInput(this)"
-                                                        value="Once A Day"
-                                                        >Once A Day</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d2"
-                                                        onclick="enterInput(this)"
-                                                        value="Twice A Day"
-                                                        >Twice A Day</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d2"
-                                                        onclick="enterInput(this)"
-                                                        value="Thrice A Day"
-                                                        >Thrice A Day</a
-                                                    >
+                                                        <span class="sr-only"
+                                                            >Toggle
+                                                            Dropdown</span
+                                                        >
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a
+                                                            class="dropdown-item d2"
+                                                            onclick="enterInput(this)"
+                                                            value="Once A Day"
+                                                            >Once A Day</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item d2"
+                                                            onclick="enterInput(this)"
+                                                            value="Twice A Day"
+                                                            >Twice A Day</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item d2"
+                                                            onclick="enterInput(this)"
+                                                            value="Thrice A Day"
+                                                            >Thrice A Day</a
+                                                        >
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group">
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                aria-label="Text input with segmented dropdown button"
-                                                style="width: 50%"
-                                                id="i3"
-                                            />
-                                            <div class="input-group-append">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                                                    data-toggle="dropdown"
-                                                    aria-haspopup="true"
-                                                    aria-expanded="false"
-                                                >
-                                                    <span class="sr-only"
-                                                        >Toggle Dropdown</span
+                                        </td>
+                                        <td>
+                                            <div class="input-group">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    aria-label="Text input with segmented dropdown button"
+                                                    style="width: 50%"
+                                                    id="i3"
+                                                />
+                                                <div class="input-group-append">
+                                                    <button
+                                                        type="button"
+                                                        class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                                                        data-toggle="dropdown"
+                                                        aria-haspopup="true"
+                                                        aria-expanded="false"
                                                     >
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a
-                                                        class="dropdown-item d3"
-                                                        onclick="enterInput(this)"
-                                                        value="After Breakfast"
-                                                        >After Breakfast</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d3"
-                                                        onclick="enterInput(this)"
-                                                        value="After Dinner"
-                                                        >After Dinner</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d3"
-                                                        onclick="enterInput(this)"
-                                                        value="Gargle After Use"
-                                                        >Gargle After Use</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d3"
-                                                        onclick="enterInput(this)"
-                                                        value="Before Sleep"
-                                                        >Before Sleep</a
-                                                    >
+                                                        <span class="sr-only"
+                                                            >Toggle
+                                                            Dropdown</span
+                                                        >
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a
+                                                            class="dropdown-item d3"
+                                                            onclick="enterInput(this)"
+                                                            value="After Breakfast"
+                                                            >After Breakfast</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item d3"
+                                                            onclick="enterInput(this)"
+                                                            value="After Dinner"
+                                                            >After Dinner</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item d3"
+                                                            onclick="enterInput(this)"
+                                                            value="Gargle After Use"
+                                                            >Gargle After Use</a
+                                                        >
+                                                        <a
+                                                            class="dropdown-item d3"
+                                                            onclick="enterInput(this)"
+                                                            value="Before Sleep"
+                                                            >Before Sleep</a
+                                                        >
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="input-group">
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                aria-label="Text input with segmented dropdown button"
-                                                style="width: 50%"
-                                                class="i4"
-                                            />
-                                            <div class="input-group-append">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                                                    data-toggle="dropdown"
-                                                    aria-haspopup="true"
-                                                    aria-expanded="false"
-                                                >
-                                                    <span class="sr-only"
-                                                        >Toggle Dropdown</span
-                                                    >
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a
-                                                        class="dropdown-item d1"
-                                                        onclick="enterInput(this)"
-                                                        value="Seroflo 250 ROTACAP"
-                                                        >Seroflo 250 ROTACAP</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d1"
-                                                        onclick="enterInput(this)"
-                                                        value="TIATE TRANSCAPS"
-                                                        >TIATE TRANSCAPS</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d1"
-                                                        onclick="enterInput(this)"
-                                                        value="DOXIFOLO 650 mg TABLET"
-                                                        >DOXIFOLO 650 mg
-                                                        TABLET</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d1"
-                                                        onclick="enterInput(this)"
-                                                        value="AKT 4KIT"
-                                                        >AKT 4KIT</a
-                                                    >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group">
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                aria-label="Text input with segmented dropdown button"
-                                                style="width: 50%"
-                                                id="i5"
-                                            />
-                                            <div class="input-group-append">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                                                    data-toggle="dropdown"
-                                                    aria-haspopup="true"
-                                                    aria-expanded="false"
-                                                >
-                                                    <span class="sr-only"
-                                                        >Toggle Dropdown</span
-                                                    >
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a
-                                                        class="dropdown-item d2"
-                                                        onclick="enterInput(this)"
-                                                        value="Once A Day"
-                                                        >Once A Day</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d2"
-                                                        onclick="enterInput(this)"
-                                                        value="Twice A Day"
-                                                        >Twice A Day</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d2"
-                                                        onclick="enterInput(this)"
-                                                        value="Thrice A Day"
-                                                        >Thrice A Day</a
-                                                    >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group">
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                aria-label="Text input with segmented dropdown button"
-                                                style="width: 50%"
-                                                id="i6"
-                                            />
-                                            <div class="input-group-append">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                                                    data-toggle="dropdown"
-                                                    aria-haspopup="true"
-                                                    aria-expanded="false"
-                                                >
-                                                    <span class="sr-only"
-                                                        >Toggle Dropdown</span
-                                                    >
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a
-                                                        class="dropdown-item d3"
-                                                        onclick="enterInput(this)"
-                                                        value="After Breakfast"
-                                                        >After Breakfast</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d3"
-                                                        onclick="enterInput(this)"
-                                                        value="After Dinner"
-                                                        >After Dinner</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d3"
-                                                        onclick="enterInput(this)"
-                                                        value="Gargle After Use"
-                                                        >Gargle After Use</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d3"
-                                                        onclick="enterInput(this)"
-                                                        value="Before Sleep"
-                                                        >Before Sleep</a
-                                                    >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="input-group">
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                aria-label="Text input with segmented dropdown button"
-                                                style="width: 50%"
-                                                id="i7"
-                                            />
-                                            <div class="input-group-append">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                                                    data-toggle="dropdown"
-                                                    aria-haspopup="true"
-                                                    aria-expanded="false"
-                                                >
-                                                    <span class="sr-only"
-                                                        >Toggle Dropdown</span
-                                                    >
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a
-                                                        class="dropdown-item d1"
-                                                        onclick="enterInput(this)"
-                                                        value="Seroflo 250 ROTACAP"
-                                                        >Seroflo 250 ROTACAP</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d1"
-                                                        onclick="enterInput(this)"
-                                                        value="TIATE TRANSCAPS"
-                                                        >TIATE TRANSCAPS</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d1"
-                                                        onclick="enterInput(this)"
-                                                        value="DOXIFOLO 650 mg TABLET"
-                                                        >DOXIFOLO 650 mg
-                                                        TABLET</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d1"
-                                                        onclick="enterInput(this)"
-                                                        value="AKT 4KIT"
-                                                        >AKT 4KIT</a
-                                                    >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group">
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                aria-label="Text input with segmented dropdown button"
-                                                style="width: 50%"
-                                                id="i8"
-                                            />
-                                            <div class="input-group-append">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                                                    data-toggle="dropdown"
-                                                    aria-haspopup="true"
-                                                    aria-expanded="false"
-                                                >
-                                                    <span class="sr-only"
-                                                        >Toggle Dropdown</span
-                                                    >
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a
-                                                        class="dropdown-item d2"
-                                                        onclick="enterInput(this)"
-                                                        value="Once A Day"
-                                                        >Once A Day</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d2"
-                                                        onclick="enterInput(this)"
-                                                        value="Twice A Day"
-                                                        >Twice A Day</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d2"
-                                                        onclick="enterInput(this)"
-                                                        value="Thrice A Day"
-                                                        >Thrice A Day</a
-                                                    >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group">
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                aria-label="Text input with segmented dropdown button"
-                                                style="width: 50%"
-                                                id="i9"
-                                            />
-                                            <div class="input-group-append">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                                                    data-toggle="dropdown"
-                                                    aria-haspopup="true"
-                                                    aria-expanded="false"
-                                                >
-                                                    <span class="sr-only"
-                                                        >Toggle Dropdown</span
-                                                    >
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a
-                                                        class="dropdown-item d3"
-                                                        onclick="enterInput(this)"
-                                                        value="After Breakfast"
-                                                        >After Breakfast</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d3"
-                                                        onclick="enterInput(this)"
-                                                        value="After Dinner"
-                                                    >
-                                                        After Dinner</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d3"
-                                                        onclick="enterInput(this)"
-                                                        value="Gargle After Use"
-                                                    >
-                                                        Gargle After Use</a
-                                                    >
-                                                    <a
-                                                        class="dropdown-item d3"
-                                                        onclick="enterInput(this)"
-                                                        value="Before Sleep"
-                                                    >
-                                                        Before Sleep</a
-                                                    >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                        <div class="form-group">
-                            <label for="physical">Advice:</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="advice"
-                            />
-                        </div>
+                            <div class="form-group">
+                                <label for="physical">Advice:</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="advice"
+                                />
+                            </div>
 
-                        <div>
-                            <label for="follow">Next follow up:</label>
-                            <input type="date" id="follow" name="trip-start" />
+                            <div>
+                                <label for="follow">Next follow up:</label>
+                                <input
+                                    type="date"
+                                    id="follow"
+                                    name="trip-start"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
 
         <script
@@ -629,6 +350,9 @@
             const enterInput = ele => {
                 console.log(ele.getAttribute('value'));
                 console.log(ele.className[15]);
+                document.getElementById(
+                    `i${ele.className[15]}`
+                ).value = ele.getAttribute('value');
             };
         </script>
     </body>
